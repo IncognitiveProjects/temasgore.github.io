@@ -46,10 +46,25 @@
         .guia-seccion h2 {
             color: #fff;
             font-size: 1.5em;
+            border-left: 4px solid #b30000;
+            padding-left: 10px;
         }
         .guia-seccion p, .guia-seccion li {
-            line-height: 1.6;
+            line-height: 1.8;
             font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        .guia-seccion strong {
+            color: #ffcccc; /* Resalta las palabras importantes en rojo claro */
+        }
+        .alerta {
+            background-color: #220000;
+            border: 1px solid #ff0000;
+            color: #ff9999;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-weight: bold;
         }
         .imagen-guia {
             width: 100%;
@@ -65,6 +80,7 @@
             border: 1px solid #555;
             padding: 15px;
             position: relative;
+            margin-top: 15px;
         }
         textarea {
             width: 100%;
@@ -76,21 +92,27 @@
             font-size: 14px;
             resize: vertical;
             outline: none;
+            white-space: pre;
+            overflow-wrap: normal;
+            overflow-x: scroll;
         }
         .btn-copiar {
             background-color: #8b0000;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 24px;
             font-family: 'Special Elite', cursive;
-            font-size: 1.1em;
+            font-size: 1.2em;
             cursor: pointer;
-            margin-top: 10px;
+            margin-top: 15px;
             transition: 0.3s;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         .btn-copiar:hover {
             background-color: #ff0000;
-            box-shadow: 0 0 10px red;
+            box-shadow: 0 0 15px red;
         }
     </style>
 </head>
@@ -99,27 +121,32 @@
     <div class="contenedor">
         <a href="index.html" class="volver">⬅ Volver a la Galería</a>
 
-        <h1>Nombre de tu Tema</h1>
-        <p style="color: #666;">Etiquetas: #Gore</p>
+        <h1>ForoGore - Estilo Moderno</h1>
+        <p style="color: #666; font-size: 1.2em;">Etiquetas: #Foro #Moderno #Rojo #Oscuro</p>
 
         <!-- ========================================== -->
-        <!-- SECCIÓN 1: LA GUÍA (TÚ LO EDITAS)          -->
+        <!-- SECCIÓN 1: LA GUÍA PASO A PASO             -->
         <!-- ========================================== -->
         <div class="guia-seccion">
-            <h2>📜 Guía de Instalación</h2>
-            <p>PASOS</p>
+            <h2>📜 Guía de Instalación Paso a Paso</h2>
+            <p>Lee con atención para que el tema se aplique correctamente. <strong>No necesitas descargar nada, todo se hace desde el navegador.</strong></p>
             
             <ol>
-                <li>En PC: Instala la extencion de Google Chrome o Firefox llamda "Stylus" El icono suele ser una S</li>
-                <li>Con la extencion instalada abre una nueva pestaña en el navegador y abre el dominio Forogore.net</li>
-                <li>Preciona el icono de la extencion (Si no te aparece arriba dale ala pieza de rompecabezas)</li>
-                <li>Te aparecera forogore.net, le daras click al + y te deberia decir algo como "Codigo" y darte donde escribir.</li>
-                <li>Todo el codigo del tema que esta abajo lo copiaras en la linea 1, despues le daras a guardar (tiene color amarillento el boton)</li>
-                 <li>Ve ala pestaña del foro haz click en la extension y dale click al swicht en forma de S hasta ponerlo en verde ¡y listo!</li>
+                <li><strong>Instala la extensión:</strong> Ve a la tienda de tu navegador (Chrome, Firefox o Edge) y busca la extensión llamada <strong>"Stylus"</strong>. Su icono es una <strong>"S"</strong>. Instálala y fíjala en tu barra de herramientas.</li>
+                <li><strong>Abre el foro:</strong> Entra a la página web <a href="https://forogore.net" target="_blank" style="color:#ff4d4d;">forogore.net</a> en una pestaña nueva.</li>
+                <li><strong>Abre Stylus:</strong> Haz clic en el icono de la extensión Stylus (si no lo ves, haz clic en el icono de la pieza de rompecabezas de tu navegador).</li>
+                <li><strong>Crea un nuevo estilo:</strong> En el panel que se abre, verás que detecta "forogore.net". Haz clic en el botón <strong>+</strong> o donde diga <strong>"Crear nuevo estilo"</strong>.</li>
+                <li><strong>Pega el código:</strong> Se abrirá una ventana con un editor de texto. <strong>Borra todo el texto que venga por defecto</strong> (como "Mozilla Format" o "Enter CSS here") y pega todo el código que está en la caja de abajo.</li>
+                <li><strong>GUARDAR:</strong> Busca el botón que dice <strong>"Guardar"</strong> (suele ser de color amarillento o azul). Haz clic en él.</li>
+                <li><strong>ACTIVAR:</strong> Vuelve a la pestaña del foro. Haz clic en el icono de Stylus de nuevo y asegúrate de que el interruptor (un switch que parece una <strong>S</strong>) esté <strong>encendido (en verde)</strong>. ¡Recarga la página y listo!</li>
             </ol>
 
-            <!-- Aquí puedes poner capturas de pantalla de tu guía -->
-            <p><strong>Ejemplo de captura:</strong></p>
+            <!-- ADVERTENCIA IMPORTANTE SOBRE EL BOTÓN DE SOBREESCRIBIR -->
+            <div class="alerta">
+                ⚠️ ¡MUY IMPORTANTE! Si al darle a guardar o al intentar pegar el código, la extensión te muestra un mensaje preguntando si quieres <strong>"Sobrescribir estilo"</strong> (o "Overwrite style"), dale que <strong>SÍ</strong>. Esto es normal, significa que ya habías empezado a crear un estilo antes en ese mismo foro y necesitas reemplazarlo con este código nuevo.
+            </div>
+
+            <p><strong>Ejemplo visual de la extensión Stylus:</strong></p>
             <img src="https://i.postimg.cc/j2WnyXsJ/Captura-de-pantalla-de-2026-10-23-20-34-42.png" alt="Paso 1" class="imagen-guia">
         </div>
 
@@ -128,11 +155,12 @@
         <!-- ========================================== -->
         <div class="guia-seccion">
             <h2>💻 Código CSS del Tema</h2>
-            <p>Haz clic en el botón de abajo para copiar todo el código.</p>
+            <p>Haz clic en el botón de abajo para copiar automáticamente todo el código.</p>
             
             <div class="bloque-css">
-                <!-- PEGA TU CÓDIGO CSS REAL ENTRE LAS ETIQUETAS <textarea> -->
-                <textarea id="/* ==UserStyle==
+                <!-- AQUÍ ESTÁ EL CÓDIGO CORREGIDO DENTRO DEL TEXTAREA -->
+                <textarea id="codigoCSS" readonly>
+/* ==UserStyle==
 @name         ForoGore - Estilo MODERNO
 @namespace    forogore-estilo-moderno
 @version      1.0.0
@@ -532,17 +560,6 @@ html body footer a:hover { color: #fff !important; }
 }
 
 }
-" readonly>
-/* Pega tu código CSS aquí adentro */
-body {
-    background-color: #000;
-    color: red;
-}
-
-/* Ejemplo de estilo */
-.foro-titulo {
-    text-shadow: 2px 2px 5px darkred;
-}
                 </textarea>
             </div>
             <button class="btn-copiar" onclick="copiarCodigo()">📋 Copiar CSS al Portapapeles</button>
@@ -556,14 +573,21 @@ body {
             var texto = document.getElementById("codigoCSS");
             texto.select();
             texto.setSelectionRange(0, 99999); /* Para móviles */
-            navigator.clipboard.writeText(texto.value);
             
-            // Cambia el texto del botón temporalmente
-            var boton = document.querySelector(".btn-copiar");
-            boton.innerText = "¡Copiado! ✔️";
-            setTimeout(function() {
-                boton.innerText = "📋 Copiar CSS al Portapapeles";
-            }, 2000);
+            // Usamos la API moderna del portapapeles
+            navigator.clipboard.writeText(texto.value).then(function() {
+                // Cambia el texto del botón temporalmente
+                var boton = document.querySelector(".btn-copiar");
+                boton.innerText = "¡Copiado con éxito! ✔️";
+                boton.style.backgroundColor = "#008000"; // Se pone verde al copiar
+                
+                setTimeout(function() {
+                    boton.innerText = "📋 Copiar CSS al Portapapeles";
+                    boton.style.backgroundColor = "#8b0000"; // Vuelve a su color rojo original
+                }, 2500);
+            }).catch(function(err) {
+                alert("Error al copiar. Por favor, selecciona el texto manualmente y presiona Ctrl+C");
+            });
         }
     </script>
 </body>
