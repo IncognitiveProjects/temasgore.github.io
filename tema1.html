@@ -100,25 +100,27 @@
         <a href="index.html" class="volver">⬅ Volver a la Galería</a>
 
         <h1>Nombre de tu Tema</h1>
-        <p style="color: #666;">Etiquetas: #Gore #Rojo #Oscuro</p>
+        <p style="color: #666;">Etiquetas: #Gore</p>
 
         <!-- ========================================== -->
         <!-- SECCIÓN 1: LA GUÍA (TÚ LO EDITAS)          -->
         <!-- ========================================== -->
         <div class="guia-seccion">
             <h2>📜 Guía de Instalación</h2>
-            <p>Escribe aquí los pasos para que la gente instale tu tema. Puedes copiar y pegar texto e imágenes.</p>
+            <p>PASOS</p>
             
             <ol>
-                <li>Descarga el archivo .zip o copia el CSS de abajo.</li>
-                <li>Ve al Panel de Administración de tu foro.</li>
-                <li>Entra en <strong>Apariencia > Plantillas > CSS</strong>.</li>
-                <li>Pega el código y guarda.</li>
+                <li>En PC: Instala la extencion de Google Chrome o Firefox llamda "Stylus" El icono suele ser una S</li>
+                <li>Con la extencion instalada abre una nueva pestaña en el navegador y abre el dominio Forogore.net</li>
+                <li>Preciona el icono de la extencion (Si no te aparece arriba dale ala pieza de rompecabezas)</li>
+                <li>Te aparecera forogore.net, le daras click al + y te deberia decir algo como "Codigo" y darte donde escribir.</li>
+                <li>Todo el codigo del tema que esta abajo lo copiaras en la linea 1, despues le daras a guardar (tiene color amarillento el boton)</li>
+                 <li>Ve ala pestaña del foro haz click en la extension y dale click al swicht en forma de S hasta ponerlo en verde ¡y listo!</li>
             </ol>
 
             <!-- Aquí puedes poner capturas de pantalla de tu guía -->
             <p><strong>Ejemplo de captura:</strong></p>
-            <img src="https://placehold.co/600x300/222/fff?text=Aqui+va+una+captura+de+la+guia" alt="Paso 1" class="imagen-guia">
+            <img src="https://i.postimg.cc/j2WnyXsJ/Captura-de-pantalla-de-2026-10-23-20-34-42.png" alt="Paso 1" class="imagen-guia">
         </div>
 
         <!-- ========================================== -->
@@ -130,7 +132,407 @@
             
             <div class="bloque-css">
                 <!-- PEGA TU CÓDIGO CSS REAL ENTRE LAS ETIQUETAS <textarea> -->
-                <textarea id="codigoCSS" readonly>
+                <textarea id="/* ==UserStyle==
+@name         ForoGore - Estilo MODERNO
+@namespace    forogore-estilo-moderno
+@version      1.0.0
+@description  Versión moderna y sobria de forogore.net: tarjetas suaves, tipografía limpia, acento rojo discreto, sin publicidad.
+@author       -
+==/UserStyle== */
+
+@-moz-document domain("forogore.net") {
+
+/* =========================================================
+   0. PALETA Y BASE
+   fondo #0e0e11 · tarjetas #16161a · bordes #26262e · acento #e5484d
+   ========================================================= */
+html body,
+html body.dark {
+  --cereza: #e5484d;
+  --accent: #e5484d;
+  --accent-2: #b4232a;
+  --surface: #16161a;
+  --surface-2: #1c1c22;
+  --border: #26262e;
+  --text: #ececf1;
+  --text-muted: #8b8b99;
+  --link: #ececf1;
+}
+html, html.dark {
+  background: #0e0e11 !important;
+  color-scheme: dark;
+  scrollbar-width: thin;
+  scrollbar-color: #2c2c35 #0e0e11;
+  scroll-behavior: smooth;
+}
+html body,
+html body.dark {
+  background: radial-gradient(900px 420px at 12% -8%, rgba(229, 72, 77, .10), transparent 65%) fixed, #0e0e11 !important;
+  color: #ececf1;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  letter-spacing: -.005em;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: rgba(229, 72, 77, .55); color: #fff; }
+html body a:hover { color: #fff !important; }
+
+/* =========================================================
+   1. SIN PUBLICIDAD NI RUIDO
+   ========================================================= */
+.ad-aads,
+iframe[data-aa],
+iframe[src*="a-ads.com"],
+[id^="aads"],
+ins.adsbygoogle,
+#dark-toggle,
+footer a[href$="/publicidad"] {
+  display: none !important;
+}
+
+/* =========================================================
+   2. BARRA SUPERIOR (cristal esmerilado)
+   ========================================================= */
+html body .nav {
+  height: 60px;
+  padding: 0 16px;
+  background: rgba(14, 14, 17, .72);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid #1f1f26;
+}
+@media (min-width: 769px) {
+  html body .nav { padding: 0 max(16px, calc((100% - 1200px) / 2 + 16px)); }
+}
+html body .nav-actions { gap: 4px; }
+html body .nav-actions > a:not([href*="/u/"]):not([href$="/mensajes"]):not([href$="/notificaciones"]) {
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #a9a9b8 !important;
+  transition: background .15s ease, color .15s ease;
+}
+html body .nav-actions > a:hover {
+  background: rgba(255, 255, 255, .06);
+  color: #fff !important;
+}
+html body .nav-actions > a[href$="/mensajes"],
+html body .nav-actions > a[href$="/notificaciones"] {
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+html body .nav-actions > a[href*="/u/"] {
+  padding: 4px 10px 4px 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .04);
+  color: #ececf1 !important;
+}
+html body .nav-actions > a[href*="/u/"] img { box-shadow: 0 0 0 2px #2c2c35; }
+html body .nav-search input {
+  width: 240px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid #26262e !important;
+  background: #1a1a20 !important;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+html body .nav-search input:focus {
+  outline: 0;
+  border-color: #e5484d !important;
+  box-shadow: 0 0 0 3px rgba(229, 72, 77, .18);
+}
+html body .nav-locale select { border-radius: 10px; padding: 7px 10px; }
+html body .nav-mobile-menu {
+  background: rgba(14, 14, 17, .96);
+  border-bottom: 1px solid #26262e;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+/* botones generales (Salir, etc.) */
+html body .btn,
+html body.dark .btn,
+html body.dark .btn-ghost {
+  background: #1c1c22 !important;
+  border: 1px solid #2c2c35;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-weight: 500;
+  transition: border-color .15s ease, background .15s ease;
+}
+html body .btn:hover,
+html body.dark .btn:hover {
+  border-color: #e5484d;
+  background: #22222a !important;
+  color: #fff !important;
+}
+
+/* =========================================================
+   3. ESTRUCTURA
+   ========================================================= */
+html body .main { max-width: 1200px; }
+@media (min-width: 769px) {
+  html body .main { padding: 28px 20px 40px; }
+}
+@media (min-width: 901px) {
+  html body .home-layout { grid-template-columns: minmax(0, 1fr) 320px; gap: 28px; }
+}
+
+/* pestañas = control segmentado */
+html body .home-feed > div:first-child {
+  gap: 4px !important;
+  margin-bottom: 14px !important;
+  padding: 4px;
+  background: #16161a;
+  border: 1px solid #26262e;
+  border-radius: 12px;
+}
+html body .home-tab {
+  padding: 9px 14px;
+  background: transparent;
+  border: 0;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #8b8b99 !important;
+  transition: background .15s ease, color .15s ease;
+}
+html body .home-tab:hover { background: rgba(255, 255, 255, .05); color: #fff !important; }
+html body .home-tab.active {
+  background: linear-gradient(135deg, #e5484d, #b4232a);
+  color: #fff !important;
+  box-shadow: 0 4px 14px rgba(229, 72, 77, .28);
+}
+
+/* Muros / Publicar */
+html body .home-feed > div:has(> a[href$="/nuevo-tema"]) { gap: 10px !important; margin-bottom: 16px !important; }
+html body .home-feed > div > a[href$="/muros"] {
+  flex: 0 0 auto !important;
+  padding: 11px 20px !important;
+  background: #16161a !important;
+  border: 1px solid #26262e !important;
+  border-radius: 12px !important;
+  color: #a9a9b8 !important;
+  font-weight: 500 !important;
+}
+html body .home-feed > div > a[href$="/muros"]:hover { border-color: #3a3a45 !important; color: #fff !important; }
+html body .home-feed > div > a[href$="/nuevo-tema"] {
+  padding: 11px 20px !important;
+  background: linear-gradient(135deg, #e5484d, #b4232a) !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  box-shadow: 0 6px 18px rgba(229, 72, 77, .25);
+  transition: transform .15s ease, box-shadow .15s ease !important;
+}
+html body .home-feed > div > a[href$="/nuevo-tema"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(229, 72, 77, .35);
+}
+
+/* =========================================================
+   4. TEMAS = tarjetas
+   ========================================================= */
+html body .thread-list { gap: 8px; }
+html body .thread-card {
+  padding: 12px 16px;
+  gap: 14px;
+  background: #16161a;
+  border: 1px solid #26262e;
+  border-radius: 14px;
+  transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease, background .16s ease;
+}
+html body .thread-card--visual { padding: 10px 16px 10px 10px; }
+html body .thread-card:hover {
+  border-color: rgba(229, 72, 77, .45);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .35);
+}
+html body .thread-card:hover,
+html body.dark .thread-card:hover { background: #1c1c22 !important; }
+
+@media (min-width: 769px) {
+  html body .home-thumb-wrap,
+  html body .home-thread-thumb { width: 84px; height: 62px; }
+}
+html body .home-thread-thumb { border-radius: 10px; }
+html body .home-thumb-play {
+  right: 6px;
+  bottom: 6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .6);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+html body .thread-top { gap: 8px; margin-bottom: 5px; }
+html body .thread-title-link {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.35;
+  -webkit-line-clamp: 2;
+  color: #ececf1;
+}
+html body .cat-badge {
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .6px;
+}
+/* insignia ENCUESTA */
+html body .thread-top > span:not(.cat-badge):not(.thread-title-link) {
+  padding: 2px 8px !important;
+  border-radius: 999px !important;
+  font-size: 10px !important;
+  background: rgba(229, 72, 77, .16) !important;
+  border: 1px solid rgba(229, 72, 77, .35);
+  color: #ff8a8d !important;
+}
+html body .thread-bottom { gap: 6px; margin-top: 0; }
+html body .thread-author { color: #b4b4c2; font-weight: 500; }
+html body .thread-time,
+html body .thread-author { font-size: 12px; }
+html body .thread-time { color: #7c7c8a; }
+html body .thread-bottom > span[style*="var(--border)"] { color: #4a4a55 !important; }
+
+/* =========================================================
+   5. CATEGORÍAS
+   ========================================================= */
+html body div:has(> .cat-bloque-head) {
+  background: #16161a !important;
+  border: 1px solid #26262e !important;
+  border-radius: 16px !important;
+  margin-bottom: 18px;
+}
+html body .cat-bloque-head {
+  padding: 14px 18px 12px;
+  background: transparent;
+  border-bottom: 1px solid #26262e;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #8b8b99;
+}
+html body .cat-row {
+  padding: 12px 18px;
+  gap: 12px;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .04);
+  transition: background .15s ease;
+}
+html body .cat-row:last-child { border-bottom: 0; }
+html body .cat-row::before {
+  content: "";
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cat-color, #e5484d);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--cat-color, #e5484d) 18%, transparent);
+}
+html body .cat-row:hover { background: color-mix(in srgb, var(--cat-color, #e5484d) 8%, transparent); }
+html body .cat-row-name { font-size: 15px; font-weight: 500; }
+html body .section-header a { color: #8b8b99; }
+html body .section-header a:hover { color: #fff !important; }
+
+/* tarjeta de Telegram */
+html body .home-telegram h2 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #8b8b99;
+}
+html body .home-telegram a {
+  padding: 16px 18px !important;
+  border: 1px solid #26262e !important;
+  border-radius: 16px !important;
+  background: linear-gradient(135deg, rgba(41, 168, 235, .10), transparent 60%), #16161a !important;
+  transition: border-color .15s ease !important;
+}
+html body .home-telegram a:hover { border-color: rgba(41, 168, 235, .5) !important; }
+
+/* =========================================================
+   6. SIDEBAR
+   ========================================================= */
+html body .sidebar-card,
+html body.dark .sidebar-card {
+  padding: 6px 0 8px;
+  margin-bottom: 18px;
+  background: #16161a !important;
+  border: 1px solid #26262e;
+  border-radius: 16px;
+}
+html body .sidebar-title {
+  margin: 0;
+  padding: 12px 18px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #8b8b99;
+}
+html body .top-user-row {
+  padding: 7px 18px;
+  gap: 10px;
+  border-bottom: 0;
+  transition: background .15s ease;
+}
+html body .top-user-row:hover { background: rgba(255, 255, 255, .035); }
+html body .top-user-avatar,
+html body .top-user-initial { width: 32px; height: 32px; border: 0; box-shadow: 0 0 0 2px #26262e; }
+html body .top-user-rank { color: #5d5d6b; }
+html body .top-user-name { font-size: 14px; font-weight: 500; }
+html body .top-user-score { color: #7c7c8a; }
+html body .rank-badge {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 9px;
+  letter-spacing: .6px;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  animation: none !important;
+}
+/* muros */
+html body .sidebar-card > a:not(.top-user-row)[href*="/u/"] {
+  padding: 10px 18px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, .05) !important;
+  transition: background .15s ease;
+}
+html body .sidebar-card > a:not(.top-user-row)[href*="/u/"]:hover { background: rgba(255, 255, 255, .035); }
+html body .sidebar-card > a:not(.top-user-row)[href*="/u/"] img { border-radius: 10px !important; }
+html body .sidebar-card > a[href$="/muros"] {
+  margin-top: 4px !important;
+  padding: 8px 0 4px;
+  font-size: 12px !important;
+  font-weight: 600;
+  color: #e5484d !important;
+}
+html body .home-sidebar .home-feed-tab { box-shadow: none; }
+
+/* =========================================================
+   7. PIE
+   ========================================================= */
+html body footer {
+  margin: 56px 0 0 !important;
+  padding: 22px 16px !important;
+  border-top: 1px solid #1f1f26 !important;
+}
+html body footer > div { font-size: 12px !important; gap: 8px 18px !important; }
+html body footer a { color: #8b8b99 !important; }
+html body footer a:hover { color: #fff !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  html body * { transition: none !important; scroll-behavior: auto !important; }
+  html body .thread-card:hover { transform: none; }
+}
+
+}
+" readonly>
 /* Pega tu código CSS aquí adentro */
 body {
     background-color: #000;
