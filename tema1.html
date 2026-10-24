@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía del Tema | Archivos Macabros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Creepster&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            font-family: 'Special Elite', cursive;
+            color: #a0a0a0;
+            margin: 0;
+            padding: 20px;
+        }
+        .contenedor {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #111;
+            border: 1px solid #330000;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(179, 0, 0, 0.2);
+        }
+        .volver {
+            display: inline-block;
+            color: #ff4d4d;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .volver:hover { text-decoration: underline; }
+        
+        h1 {
+            font-family: 'Creepster', cursive;
+            color: #b30000;
+            font-size: 3em;
+            margin-top: 0;
+            border-bottom: 2px dashed #330000;
+            padding-bottom: 10px;
+        }
+        
+        /* Estilos para la Guía */
+        .guia-seccion {
+            margin-bottom: 40px;
+        }
+        .guia-seccion h2 {
+            color: #fff;
+            font-size: 1.5em;
+        }
+        .guia-seccion p, .guia-seccion li {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+        .imagen-guia {
+            width: 100%;
+            max-width: 600px;
+            border: 2px solid #330000;
+            margin: 15px 0;
+            display: block;
+        }
+
+        /* Estilos para el bloque de código */
+        .bloque-css {
+            background-color: #000;
+            border: 1px solid #555;
+            padding: 15px;
+            position: relative;
+        }
+        textarea {
+            width: 100%;
+            height: 250px;
+            background-color: transparent;
+            color: #00ff00; /* Texto verde tipo Matrix/Hacker */
+            border: none;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            resize: vertical;
+            outline: none;
+        }
+        .btn-copiar {
+            background-color: #8b0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-family: 'Special Elite', cursive;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        .btn-copiar:hover {
+            background-color: #ff0000;
+            box-shadow: 0 0 10px red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <a href="index.html" class="volver">⬅ Volver a la Galería</a>
+
+        <h1>Nombre de tu Tema</h1>
+        <p style="color: #666;">Etiquetas: #Gore #Rojo #Oscuro</p>
+
+        <!-- ========================================== -->
+        <!-- SECCIÓN 1: LA GUÍA (TÚ LO EDITAS)          -->
+        <!-- ========================================== -->
+        <div class="guia-seccion">
+            <h2>📜 Guía de Instalación</h2>
+            <p>Escribe aquí los pasos para que la gente instale tu tema. Puedes copiar y pegar texto e imágenes.</p>
+            
+            <ol>
+                <li>Descarga el archivo .zip o copia el CSS de abajo.</li>
+                <li>Ve al Panel de Administración de tu foro.</li>
+                <li>Entra en <strong>Apariencia > Plantillas > CSS</strong>.</li>
+                <li>Pega el código y guarda.</li>
+            </ol>
+
+            <!-- Aquí puedes poner capturas de pantalla de tu guía -->
+            <p><strong>Ejemplo de captura:</strong></p>
+            <img src="https://placehold.co/600x300/222/fff?text=Aqui+va+una+captura+de+la+guia" alt="Paso 1" class="imagen-guia">
+        </div>
+
+        <!-- ========================================== -->
+        <!-- SECCIÓN 2: EL CÓDIGO CSS (PARA COPIAR)     -->
+        <!-- ========================================== -->
+        <div class="guia-seccion">
+            <h2>💻 Código CSS del Tema</h2>
+            <p>Haz clic en el botón de abajo para copiar todo el código.</p>
+            
+            <div class="bloque-css">
+                <!-- PEGA TU CÓDIGO CSS REAL ENTRE LAS ETIQUETAS <textarea> -->
+                <textarea id="codigoCSS" readonly>
+/* Pega tu código CSS aquí adentro */
+body {
+    background-color: #000;
+    color: red;
+}
+
+/* Ejemplo de estilo */
+.foro-titulo {
+    text-shadow: 2px 2px 5px darkred;
+}
+                </textarea>
+            </div>
+            <button class="btn-copiar" onclick="copiarCodigo()">📋 Copiar CSS al Portapapeles</button>
+        </div>
+
+    </div>
+
+    <!-- SCRIPT PARA COPIAR AL PORTAPAPELES -->
+    <script>
+        function copiarCodigo() {
+            var texto = document.getElementById("codigoCSS");
+            texto.select();
+            texto.setSelectionRange(0, 99999); /* Para móviles */
+            navigator.clipboard.writeText(texto.value);
+            
+            // Cambia el texto del botón temporalmente
+            var boton = document.querySelector(".btn-copiar");
+            boton.innerText = "¡Copiado! ✔️";
+            setTimeout(function() {
+                boton.innerText = "📋 Copiar CSS al Portapapeles";
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
